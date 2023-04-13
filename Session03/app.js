@@ -101,7 +101,7 @@ console.log(null + ""); // null
 
 console.log(null + 10); // 10
 
-// Trường hợp false - true
+// Trường hợp true - false hoặc false - true
 // - Javascript nó sẽ cố gắng chuyển đổi Boolean -> Number 
 // - Lúc này true và false sẽ được chuyển đổi từ Boolean -> Number, true - false sẽ có giá trị là 1 - 0
 // - Kết quả Number - Number = Number
