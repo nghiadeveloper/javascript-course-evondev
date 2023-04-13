@@ -114,12 +114,20 @@ console.log(myStr2.trim().replace("Developer", "Fullstack").toUpperCase().repeat
 // Bài 14 - 15: Tìm hiểu kiểu dữ liệu number phần 1 - 2
 // Lý thuyết
 // - typeof được sử dụng để kiểm tra kiểu dữ liệu
-// - parseInt() là một hàm được sử dụng để chuyển đổi một chuỗi sang kiểu số nguyên.
-// - parseFloat() là một hàm được sử dụng để chuyển đổi một chuỗi sang kiểu số thực
-// - Math.abs() là một hàm được sử dụng để trả về giá trị tuyệt đối (giá trị dương) của một số. 
-// - Math.floor() là một hàm được sử dụng để làm tròn số xuống (lấy phần nguyên của một số)
-// - Math.ceil() là một hàm được sử dụng để làm tròn số lên (lấy phần nguyên của một số)
-// - Math.round() là một hàm được sử dụng để làm tròn số thành số nguyên gần nhất.
+// - parseInt() là một phương thức được sử dụng để chuyển đổi một chuỗi sang kiểu số nguyên.
+// - parseFloat() là một phương thức được sử dụng để chuyển đổi một chuỗi sang kiểu số thực
+// - Math.abs() là một phương thức được sử dụng để trả về giá trị tuyệt đối (giá trị dương) của một số. 
+// - Math.floor() là một phương thức được sử dụng để làm tròn số xuống (lấy phần nguyên của một số)
+// - Math.ceil() là một phương thức được sử dụng để làm tròn số lên (lấy phần nguyên của một số)
+// - Math.round() là một phương thức được sử dụng để làm tròn số thành số nguyên gần nhất.
+// - toFixed() là một phương thức dùng để chuyển đổi một số thành kiểu chuỗi, lấy số ký tự ở phần thập phân
+// - Math.max() là một phương thức lấy ra số lớn nhất
+// - Math.pow() là một phương thức trả về lũy thừa của hai số xác định
+// - Math.sqrt() là một phương thức được sử dụng để tính căn bậc hai của một số
+// - isNaN() là một phương thức được sử dụng để kiểm tra một giá trị truyền vào có phải là số hay không?.
+// Trường hợp parameter value là số -> isNaN() trả về false. 
+// Trường hợp parameter value không phải là số isNaN() trả về true.
+// - Number.isNaN() sẽ không chuyển kiểu của tham số truyền vào và nó sẽ trả về False với bất kì giá trị nào không phải là số.
 
 const number1 = "22"; // kiểu chuỗi
 const number2 = "22.5"; // kiểu chuỗi
@@ -140,3 +148,45 @@ console.log(Math.floor(number2)); // 22
 console.log(Math.ceil(number2)); // 23
 
 console.log(Math.round(number2)); // 23
+
+console.log(parseFloat((1 / 3).toFixed(2))); // 0.33
+
+console.log(Math.max(1, 2, 3)); // 3
+
+console.log(Math.min(1, 2, 3)); // 1
+
+console.log(Math.pow(3, 2)); // 9
+
+console.log(Math.sqrt(9)); // 3
+
+console.log(isNaN("Nguyễn Hiếu Nghĩa")); // true
+
+console.log(isNaN("12345")); // false
+
+console.log(Number.isNaN("12345")); // false
+
+console.log(Number.isNaN(NaN)); // true
+
+console.log(Number.isNaN(Number.NaN)); // true
+
+// -----------------------------------------------------------------------------------------------------
+
+// Bài 16: Tìm hiểu kiểu dữ liệu khác
+// Lý thuyết:
+// - undefined là khai báo một biến nhưng chưa gán giá trị cho biến đó
+// - null là một giá trị gán, có nghĩa là bạn có thể gán giá trị null cho bất kỳ biến nào khi bạn muốn biến đó trống.
+// - boolean là trã về kết quả true hoặc false. Có 2 loại: Falsy và Truthy
+// falsy: undefined, null, false, NaN, ""
+// truthy: "abc", 1, true, 100, 1000
+
+let a;
+console.log(a); // undefined
+
+let b;
+console.log(b); // undefined
+
+b = 100;
+console.log(b); // 100
+
+let d = null;
+console.log(d) // null
