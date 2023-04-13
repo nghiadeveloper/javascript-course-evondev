@@ -97,7 +97,7 @@ console.log(null + ""); // null
 // Trường hợp null + 10
 // - Javascript nó sẽ cố gắng chuyển đổi null -> Number
 // - Lúc này null sẽ được chuyển đổi từ null -> Number, null sẽ có giá trị là 0 
-// - Kết quả String + String = String 
+// - Kết quả Number + Number = Number
 
 console.log(null + 10); // 10
 
