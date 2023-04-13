@@ -57,3 +57,59 @@ console.log(`Boolean of NaN: ${Boolean(NaN)}`); // false
 console.log(`Boolean of false: ${Boolean(false)}`); // false
 
 console.log(`Boolean of text: ${Boolean("Nguyễn Hiếu Nghĩa")}`); // true
+
+// -----------------------------------------------------------------------------------------------------
+
+// Bài 20: Type coercion là gì?
+// Lý thuyết: 
+// - Type coercion được hiểu đơn giản là chuyển đổi dữ liệu từ kiểu này sang kiểu khác
+
+console.log(10 + 10); // 20
+
+// Trường hợp dấu +
+// - Javascript nó sẽ cố gắng chuyển đổi Number -> String. 
+// - Lúc này số 10 sẽ được chuyển đổi từ Number -> String 
+// - Kết quả String + String = String 
+
+console.log(10 + "10"); // 1010
+
+// Trường hợp dấu - * / 
+// - Javascript nó sẽ cố gắng chuyển đổi String -> Number 
+// - Lúc này số 10 sẽ được chuyển đổi từ String -> Number 
+// - Kết quả Number - Number = Number
+
+console.log(10 - "10"); // 0
+
+// Trường hợp "" - 1
+// - Javascript nó sẽ cố gắng chuyển đổi String -> Number 
+// - Lúc này String rỗng sẽ được chuyển đổi từ String -> Number, "" sẽ có giá trị là 0
+// - Kết quả Number - Number = Number
+
+console.log("" - 1); // -1
+
+// Trường hợp null + ""
+// - Javascript nó sẽ cố gắng chuyển đổi null -> String 
+// - Lúc này null sẽ được chuyển đổi từ null -> String 
+// - Kết quả String + String = String 
+
+console.log(null + ""); // null
+
+// Trường hợp null + 10
+// - Javascript nó sẽ cố gắng chuyển đổi null -> Number
+// - Lúc này null sẽ được chuyển đổi từ null -> Number, null sẽ có giá trị là 0 
+// - Kết quả String + String = String 
+
+console.log(null + 10); // 10
+
+// Trường hợp false - true
+// - Javascript nó sẽ cố gắng chuyển đổi Boolean -> Number 
+// - Lúc này true và false sẽ được chuyển đổi từ Boolean -> Number, true - false sẽ có giá trị là 1 - 0
+// - Kết quả Number - Number = Number
+
+console.log(true - false); // 1
+
+// Trường hợp null + undefined
+// null là giá trị rỗng, undefined là giá trị không xác định
+// Theo lý thuyết nếu giá trị truyền vào không thể chuyển đổi, thì nó sẽ trả về giá trị NaN.
+
+console.log(null + undefined); // NaN
