@@ -75,7 +75,7 @@ console.log(10 + "10"); // 1010
 
 // Trường hợp dấu - * / 
 // - Javascript nó sẽ cố gắng chuyển đổi String -> Number 
-// - Lúc này số 10 sẽ được chuyển đổi từ String -> Number 
+// - Lúc này chuỗi "10" sẽ được chuyển đổi từ String -> Number 
 // - Kết quả Number - Number = Number
 
 console.log(10 - "10"); // 0
@@ -109,7 +109,7 @@ console.log(null + 10); // 10
 console.log(true - false); // 1
 
 // Trường hợp null + undefined
-// null là giá trị rỗng, undefined là giá trị không xác định
-// Theo lý thuyết nếu giá trị truyền vào không thể chuyển đổi, thì nó sẽ trả về giá trị NaN.
+// - null là giá trị rỗng, undefined là giá trị không xác định
+// - Theo lý thuyết nếu giá trị truyền vào không thể chuyển đổi, thì nó sẽ trả về giá trị NaN.
 
 console.log(null + undefined); // NaN
