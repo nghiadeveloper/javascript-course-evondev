@@ -226,4 +226,4 @@ console.log(10 !== "10"); // true
 // - Kết quả Number === String -> false 
 // - Kết quả 1 === "true" -> false
 
-console.log(true == "true"); // false
+console.log(true === "true"); // false
